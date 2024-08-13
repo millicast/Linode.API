@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using System;
+using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Linode.Api.Objets.LinodeInstance;
@@ -151,6 +152,35 @@ namespace Linode.Api.Client
         public async Task Delete(LinodeInstance linodeInstance)
         {
             await Delete(linodeInstance.Id);
+        }
+
+        /// <summary>
+        /// View Disk information for Disks associated with this Linode
+        /// </summary>
+        /// <param name="id">ID of Instance</param>
+        /// <returns></returns>
+        public async Task<List<LinodeDisk>> Disks(long id)
+        {
+            await Task.CompletedTask;
+            throw new NotImplementedException();
+        }
+
+        public async Task Boot(long id)
+        {
+            await Task.CompletedTask;
+            throw new NotImplementedException();
+        }
+
+        public async Task Shutdown(long id)
+        {
+            await Task.CompletedTask;
+            throw new NotImplementedException();
+        }
+
+        public async Task Reboot(long id)
+        {
+            await Task.CompletedTask;
+            throw new NotImplementedException();
         }
 
         #region Object Create
